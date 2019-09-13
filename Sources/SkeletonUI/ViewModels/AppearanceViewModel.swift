@@ -6,10 +6,22 @@ public enum GradientType {
     case radial
 }
 
+#if os(iOS) || os(OSX)
 public enum AppearanceType {
     case solid(color: Color = Color(.systemGray4), background: Color = Color(.systemGray6))
     case gradient(GradientType = .linear, color: Color = Color(.systemGray4), background: Color = Color(.systemGray6))
 }
+#elseif os(watchOS)
+public enum AppearanceType {
+    case solid(color: Color = .secondary, background: Color = .primary)
+    case gradient(GradientType = .linear, color: Color = .secondary, background: Color = .primary)
+}
+#elseif os(tvOS)
+public enum AppearanceType {
+    case solid(color: Color = Color(.tertiaryLabel), background: Color = Color(.secondaryLabel))
+    case gradient(GradientType = .linear, color: Color = Color(.tertiaryLabel), background: Color = Color(.secondaryLabel))
+}
+#endif
 
 struct AppearanceViewModel {
     var type: AppearanceType = .solid()
