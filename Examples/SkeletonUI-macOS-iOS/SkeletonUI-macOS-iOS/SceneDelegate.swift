@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  SkeletonUI-macOS-iOS
-//
-//  Created by CSolanaM on 17/08/2019.
-//  Copyright © 2019 CSolanaM All rights reserved.
-//
-
 import UIKit
 import SwiftUI
 
@@ -22,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: ContentView())
+            window.rootViewController = UIHostingController(rootView: AlbumsView())
             self.window = window
             window.makeKeyAndVisible()
         }
