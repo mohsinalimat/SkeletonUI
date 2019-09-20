@@ -64,7 +64,7 @@ struct AnimationViewModel {
     let opacity = OpacityViewModel()
     let radius = RadiusViewModel()
     let angle = AngleViewModel()
-    var type: AnimationType = .none {
+    var type: AnimationType = .linear() {
         didSet {
             switch type {
             case .none:

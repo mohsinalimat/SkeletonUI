@@ -1,6 +1,7 @@
 import SwiftUI
 
 public extension Image {
+    #if os(iOS) || os(tvOS) || os(watchOS)
     init(uiImage: UIImage?) {
         if let uiImage = uiImage {
             self.init(uiImage: uiImage)
@@ -8,6 +9,15 @@ public extension Image {
             self.init(uiImage: UIImage())
         }
     }
+    #elseif os(OSX)
+    init(nsImage: NSImage?) {
+        if let nsImage = nsImage {
+            self.init(nsImage: nsImage)
+        } else {
+            self.init(nsImage: NSImage())
+        }
+    }
+    #endif
 
     init(_ name: String?, bundle: Bundle? = nil) {
         if let name = name {
@@ -33,6 +43,7 @@ public extension Image {
         }
     }
 
+    #if os(iOS) || os(tvOS) || os(watchOS)
     init(systemName: String?) {
         if let systemName = systemName {
             self.init(systemName: systemName)
@@ -40,7 +51,9 @@ public extension Image {
             self.init(systemName: String())
         }
     }
+    #endif
 
+    #if os(iOS) || os(tvOS) || os(watchOS)
     init(_ cgImage: CGImage?, scale: CGFloat, orientation: Image.Orientation = .up, label: Text) {
         if let cgImage = cgImage {
             self.init(cgImage, scale: scale, orientation: orientation, label: label)
@@ -50,7 +63,19 @@ public extension Image {
             self.init(String())
         }
     }
+    #elseif os(OSX)
+    init(_ cgImage: CGImage?, scale: CGFloat, orientation: Image.Orientation = .up, label: Text) {
+        if let cgImage = cgImage {
+            self.init(cgImage, scale: scale, orientation: orientation, label: label)
+        } else if let image = NSImage().cgImage(forProposedRect: nil, context: nil, hints: nil) {
+            self.init(image, scale: scale, orientation: orientation, label: label)
+        } else {
+            self.init(String())
+        }
+    }
+    #endif
 
+    #if os(iOS) || os(tvOS) || os(watchOS)
     init(decorative cgImage: CGImage?, scale: CGFloat, orientation: Image.Orientation = .up) {
         if let cgImage = cgImage {
             self.init(decorative: cgImage, scale: scale, orientation: orientation)
@@ -60,4 +85,15 @@ public extension Image {
             self.init(String())
         }
     }
+    #elseif os(OSX)
+    init(decorative cgImage: CGImage?, scale: CGFloat, orientation: Image.Orientation = .up) {
+        if let cgImage = cgImage {
+            self.init(decorative: cgImage, scale: scale, orientation: orientation)
+        } else if let image = NSImage().cgImage(forProposedRect: nil, context: nil, hints: nil) {
+            self.init(decorative: image, scale: scale, orientation: orientation)
+        } else {
+            self.init(String())
+        }
+    }
+    #endif
 }
