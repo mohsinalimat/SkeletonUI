@@ -14,7 +14,7 @@ public enum ShapeType {
 }
 
 struct ShapeViewModel {
-    var type: ShapeType = .rectangle
+    var type: ShapeType = .capsule
 
     func path(in rect: CGRect) -> Path {
         switch type {

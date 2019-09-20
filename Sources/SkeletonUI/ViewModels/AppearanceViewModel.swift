@@ -24,7 +24,7 @@ public enum AppearanceType {
 #endif
 
 struct AppearanceViewModel {
-    var type: AppearanceType = .solid()
+    var type: AppearanceType = .gradient()
 
     func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> some View where S: Shape {
         switch type {
