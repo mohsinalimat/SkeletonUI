@@ -10,4 +10,6 @@ jobs:
       - name: swift test
         env:
           DEVELOPER_DIR: /Applications/Xcode_11.app/Contents/Developer
-        run: swift test
+        run: |
+          xcode-select -s /Applications/Xcode_11.app/Contents/Developer
+          swift test
