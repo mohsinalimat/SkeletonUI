@@ -1,6 +1,5 @@
-
 name: Test
-on: [push]
+on: push
 jobs:
   build:
     name: Test
@@ -9,4 +8,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Test
+        env:
+          DEVELOPER_DIR: /Applications/Xcode_11.app/Contents/Developer
         run: swift test
