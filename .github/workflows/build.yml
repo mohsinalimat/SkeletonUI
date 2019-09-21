@@ -2,7 +2,7 @@ name: Build
 on: [push]
 jobs:
   build:
-    name: Test
+    name: Build
     runs-on: macOS-latest
     steps:
       - name: Checkout
