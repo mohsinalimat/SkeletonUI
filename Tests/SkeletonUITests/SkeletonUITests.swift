@@ -1,5 +1,5 @@
 import XCTest
-@testable import SkeletonUI
+import SkeletonUI
 
 final class SkeletonUITests: XCTestCase {
     func testExample() {
