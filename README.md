@@ -1,4 +1,6 @@
 # SkeletonUI
+![GitHub actions (build workflow)](https://github.com/CSolanaM/SkeletonUI/workflows/build/badge.svg)
+![GitHub actions (test workflow)](https://github.com/CSolanaM/SkeletonUI/workflows/test/badge.svg)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/SkeletonUI)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/CSolanaM/SkeletonUI?color=lightGray&label=version)
 ![GitHub](https://img.shields.io/github/license/CSolanaM/SkeletonUI?color=lightGray)
