@@ -11,5 +11,5 @@ jobs:
         env:
           DEVELOPER_DIR: /Applications/Xcode_11.app/Contents/Developer
         run: |
-          xcode-select -s /Applications/Xcode_11.app/Contents/Developer
+          sudo xcode-select -s /Applications/Xcode_11.app/Contents/Developer
           swift test
