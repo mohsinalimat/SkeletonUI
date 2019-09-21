@@ -1,13 +1,13 @@
-name: Test
+name: test
 on: push
 jobs:
   build:
-    name: Test
+    name: test
     runs-on: macOS-latest
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@master
-      - name: Test
+      - name: swift test
         env:
           DEVELOPER_DIR: /Applications/Xcode_11.app/Contents/Developer
         run: swift test
