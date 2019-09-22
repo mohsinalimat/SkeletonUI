@@ -10,16 +10,16 @@ SkeletonUI aims to bring an elegant, declarative syntax to skeleton loading anim
 
 # Requirements
 
-- macOS 10.15
-- Xcode 11.0
-- Swift 5.0
+- macOS 10.15.
+- Xcode 11.0.
+- Swift 5.0.
 
 # Supported Platforms
 
-- iOS 13.0
-- tvOS 13.0
-- watchOS 6.0
-- macOS 10.15
+- iOS 13.0.
+- tvOS 13.0.
+- watchOS 6.0.
+- macOS 10.15.
 
 # Installation
 
@@ -43,13 +43,13 @@ pod 'SkeletonUI'
 
 # Features
 
-- [x] SwiftUI simple, declarative syntax
-- [x] Super easy and simple to set up
-- [x] All Views are skeletonables
-- [x] Fully customizable
-- [x] Universal (iPhone, iPad, iPod, Apple TV, Apple Watch, Mac)
-- [x] SwiftUI ViewModifier power
-- [x] Lightweight codebase
+- [x] SwiftUI simple, declarative syntax.
+- [x] Super easy and simple to set up.
+- [x] All Views are skeletonables.
+- [x] Fully customizable.
+- [x] Universal (iPhone, iPad, iPod, Apple TV, Apple Watch, Mac).
+- [x] SwiftUI ViewModifier power.
+- [x] Lightweight codebase.
 
 # Usage
 
