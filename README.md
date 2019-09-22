@@ -12,20 +12,20 @@
 
 SkeletonUI aims to bring an elegant, declarative syntax to skeleton loading animations. Get rid of loading screens or spinners and start using skeletons to represent final content shapes.
 
-# Requirements
+# Requirements :gear:
 
 - macOS 10.15.
 - Xcode 11.0.
 - Swift 5.0.
 
-# Supported Platforms
+# Supported Platforms :iphone:
 
 - iOS 13.0.
 - tvOS 13.0.
 - watchOS 6.0.
 - macOS 10.15.
 
-# Installation
+# Installation :computer:
 
 #### [Swift Package Manager](https://swift.org/package-manager/)
 
@@ -45,7 +45,7 @@ To integrate SkeletonUI into your Xcode project using CocoaPods, specify it in y
 pod 'SkeletonUI'
 ```
 
-# Features
+# Features :sparkles:
 
 - [x] SwiftUI simple, declarative syntax.
 - [x] Super easy and simple to set up.
@@ -55,13 +55,13 @@ pod 'SkeletonUI'
 - [x] SwiftUI ViewModifier power.
 - [x] Lightweight codebase.
 
-# Usage
+# Usage :rocket:
 
-# Change Log
+# Change Log :calendar:
 
 See [CHANGELOG.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.md) for details.
 
-# Contributing
+# Contributing :tada:
 
 - Suggest your idea as a [feature request](https://github.com/CSolanaM/SkeletonUI/issues/new?assignees=&labels=&template=feature_request.md&title=) for this project.
 - Create a [bug report](https://github.com/CSolanaM/SkeletonUI/issues/new?assignees=&labels=&template=bug_report.md&title=) to help us improve.
@@ -69,14 +69,14 @@ See [CHANGELOG.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.
 
 See [CONTRIBUTING.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CONTRIBUTING.md) for details.
 
-# Code of Conduct
+# Code of Conduct :speech_balloon:
 
 See [CODE_OF_CONDUCT.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CODE_OF_CONDUCT.md) for details.
 
-# Credits
+# Credits :raising_hand:
 
 SkeletonUI is owned and maintained by [CSolanaM](https://csolanam.io). You can follow me on Twitter at [@CSolanaM](https://twitter.com/CSolanaM) or contact me via [email](mailto:apps@csolanam.io) for project updates and releases.
 
-# License
+# License :mortar_board:
 
 SkeletonUI is released under the MIT license. See [LICENSE](https://github.com/CSolanaM/SkeletonUI/blob/master/LICENSE) for details.
