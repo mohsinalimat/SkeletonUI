@@ -1,5 +1,5 @@
 <p align='center'>
-	<img src='Assets/header.png'>
+	<img src='Assets/header.gif'>
 </p>
 <p align='center'>
 	<img src='https://github.com/CSolanaM/SkeletonUI/workflows/build/badge.svg'>
