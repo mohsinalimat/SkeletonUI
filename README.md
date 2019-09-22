@@ -67,6 +67,10 @@ See [CHANGELOG.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.
 - Create a [bug report](https://github.com/CSolanaM/SkeletonUI/issues/new?assignees=&labels=&template=bug_report.md&title=) to help us improve.
 - Propose your own fixes, suggestions and open a pull request with the changes.
 
+See [CONTRIBUTING.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CONTRIBUTING.md) for details.
+
+# Code of Conduct
+
 See [CODE_OF_CONDUCT.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CODE_OF_CONDUCT.md) for details.
 
 # Credits
