@@ -54,11 +54,17 @@ pod 'SkeletonUI'
 
 # Usage
 
+# Change Log
+
+See [CHANGELOG](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.md) for details.
+
 # Contributing
 
 - Suggest your idea as a [feature request](https://github.com/CSolanaM/SkeletonUI/issues/new?assignees=&labels=&template=feature_request.md&title=) for this project.
 - Create a [bug report](https://github.com/CSolanaM/SkeletonUI/issues/new?assignees=&labels=&template=bug_report.md&title=) to help us improve.
 - Propose your own fixes, suggestions and open a pull request with the changes.
+
+See [CODE_OF_CONDUCT](https://github.com/CSolanaM/SkeletonUI/blob/master/CODE_OF_CONDUCT.md) for details.
 
 # Credits
 
