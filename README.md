@@ -43,13 +43,12 @@ pod 'SkeletonUI'
 
 # Features
 
-- [x] SwiftUI declarative syntax
+- [x] SwiftUI simple, declarative syntax
 - [x] Super easy and simple to set up
 - [x] All Views are skeletonables
 - [x] Fully customizable
 - [x] Universal (iPhone, iPad, iPod, Apple TV, Apple Watch, Mac)
 - [x] SwiftUI ViewModifier power
-- [x] Simple Swift syntax
 - [x] Lightweight codebase
 
 # Usage
