@@ -1,10 +1,14 @@
-# SkeletonUI
-![GitHub actions (build workflow)](https://github.com/CSolanaM/SkeletonUI/workflows/build/badge.svg)
-![GitHub actions (test workflow)](https://github.com/CSolanaM/SkeletonUI/workflows/test/badge.svg)
-![Cocoapods platforms](https://img.shields.io/cocoapods/p/SkeletonUI)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/CSolanaM/SkeletonUI?color=lightGray&label=version)
-![GitHub](https://img.shields.io/github/license/CSolanaM/SkeletonUI?color=lightGray)
-[![Twitter](https://img.shields.io/badge/twitter-@CSolanaM-lightGray.svg?style=flat&label=contact)](https://twitter.com/CSolanaM)
+<p align='center'>
+	<img src='Assets/header.png'>
+</p>
+<p align='center'>
+	<img src='https://github.com/CSolanaM/SkeletonUI/workflows/build/badge.svg'>
+	<img src='https://github.com/CSolanaM/SkeletonUI/workflows/test/badge.svg'>
+	<img src='https://img.shields.io/cocoapods/p/SkeletonUI'>
+	<img src='https://img.shields.io/github/v/tag/CSolanaM/SkeletonUI?color=lightGray&label=version'>
+	<img src='https://img.shields.io/github/license/CSolanaM/SkeletonUI?color=lightGray'>
+	<a href='https://twitter.com/CSolanaM'><img src='https://img.shields.io/badge/twitter-@CSolanaM-lightGray.svg?style=flat&label=contact'></a>
+</p>
 
 SkeletonUI aims to bring an elegant, declarative syntax to skeleton loading animations. Get rid of loading screens or spinners and start using skeletons to represent final content shapes.
 
