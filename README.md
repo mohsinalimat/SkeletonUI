@@ -55,7 +55,7 @@ pod 'SkeletonUI'
 
 # Change Log
 
-See [CHANGELOG](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.md) for details.
+See [CHANGELOG.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.md) for details.
 
 # Contributing
 
@@ -63,7 +63,7 @@ See [CHANGELOG](https://github.com/CSolanaM/SkeletonUI/blob/master/CHANGELOG.md)
 - Create a [bug report](https://github.com/CSolanaM/SkeletonUI/issues/new?assignees=&labels=&template=bug_report.md&title=) to help us improve.
 - Propose your own fixes, suggestions and open a pull request with the changes.
 
-See [CODE_OF_CONDUCT](https://github.com/CSolanaM/SkeletonUI/blob/master/CODE_OF_CONDUCT.md) for details.
+See [CODE_OF_CONDUCT.md](https://github.com/CSolanaM/SkeletonUI/blob/master/CODE_OF_CONDUCT.md) for details.
 
 # Credits
 
