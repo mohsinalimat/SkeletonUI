@@ -1,15 +1,15 @@
-import SwiftUI
 import SkeletonUI
+import SwiftUI
 
-struct AlbumView: View {
+struct CharacterView: View {
     @ObservedObject var imageViewModel: ImageViewModel
-    let album: Album?
+    let character: Character?
     let loading: Bool
 
-    init(album: Album?, loading: Bool) {
-        self.album = album
+    init(character: Character?, loading: Bool) {
+        self.character = character
         self.loading = loading
-        self.imageViewModel = ImageViewModel(album?.artworkUrl100)
+        imageViewModel = ImageViewModel(character?.image)
     }
 
     var body: some View {
@@ -22,7 +22,7 @@ struct AlbumView: View {
                 .animation(type: .linear())
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
-            Text(album?.artistName)
+            Text(character?.name)
                 .skeleton(with: loading)
                 .shape(type: .capsule)
                 .appearance(type: .gradient())
@@ -32,9 +32,9 @@ struct AlbumView: View {
 }
 
 #if DEBUG
-struct AlbumView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumView(album: nil, loading: false)
+    struct CharacterView_Previews: PreviewProvider {
+        static var previews: some View {
+            CharacterView(character: nil, loading: false)
+        }
     }
-}
 #endif

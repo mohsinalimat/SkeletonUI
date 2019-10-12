@@ -1,3 +1,3 @@
 struct Response: Decodable {
-    let feed: Feed
+    let results: [Character]
 }
