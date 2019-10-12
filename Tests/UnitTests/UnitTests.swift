@@ -1,5 +1,5 @@
-import XCTest
 import SkeletonUI
+import XCTest
 
 final class SkeletonUITests: XCTestCase {
     func testExample() {
@@ -7,6 +7,6 @@ final class SkeletonUITests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }

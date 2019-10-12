@@ -1,6 +1,9 @@
+import SnapshotTests
+import UITests
+import UnitTests
 import XCTest
-import SkeletonUITests
 
 var tests = [XCTestCaseEntry]()
-tests += SkeletonUITests.allTests()
+tests += SnapshotTests.allTests()
+tests += UnitTests.allTests()
 XCTMain(tests)
