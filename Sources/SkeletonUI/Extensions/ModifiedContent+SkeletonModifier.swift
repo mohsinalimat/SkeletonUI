@@ -11,7 +11,7 @@ public extension ModifiedContent where Content: View, Modifier == SkeletonModifi
         modifier.skeleton.appearance.type = type
         return self
     }
-    
+
     func multiline(lines: Int, scales: [Int: CGFloat]? = nil, spacing: CGFloat? = nil) -> ModifiedContent<Content, SkeletonModifier> {
         modifier.skeleton.multiline.lines = lines
         if let scales = scales {
@@ -22,7 +22,7 @@ public extension ModifiedContent where Content: View, Modifier == SkeletonModifi
         }
         return self
     }
-    
+
     func shape(type: ShapeType) -> ModifiedContent<Content, SkeletonModifier> {
         modifier.skeleton.shape.type = type
         return self

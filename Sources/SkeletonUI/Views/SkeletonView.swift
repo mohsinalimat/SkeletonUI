@@ -3,7 +3,7 @@ import SwiftUI
 struct SkeletonView: View {
     let skeleton: SkeletonViewModel
     let line: Int
-    
+
     var body: some View {
         GeometryReader { geometry in
             SkeletonShape(skeleton: self.skeleton)
@@ -21,7 +21,7 @@ struct SkeletonView: View {
                     withAnimation(self.skeleton.animation.angle.animation) {
                         self.skeleton.animation.angle.value = self.skeleton.animation.angle.range.upperBound
                     }
-            }
+                }
         }
     }
 }

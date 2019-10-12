@@ -18,7 +18,7 @@ public extension Toggle where Label == Text {
             self.init(String(), isOn: isOn)
         }
     }
-    
+
     init<S>(_ title: S?, isOn: Binding<Bool>) where S: OptionalType, S.Wrapped: StringProtocol {
         if let title = title?.wrapped {
             self.init(title, isOn: isOn)

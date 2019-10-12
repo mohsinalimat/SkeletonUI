@@ -8,7 +8,7 @@ public extension Text {
             self.init(String())
         }
     }
-    
+
     init(_ key: LocalizedStringKey?, tableName: String? = nil, bundle: Bundle? = nil, comment: StaticString? = nil) {
         if let key = key {
             self.init(key, tableName: tableName, bundle: bundle, comment: comment)
@@ -16,7 +16,7 @@ public extension Text {
             self.init(LocalizedStringKey(String()), tableName: tableName, bundle: bundle, comment: comment)
         }
     }
-    
+
     init(verbatim content: String?) {
         if let content = content {
             self.init(verbatim: content)

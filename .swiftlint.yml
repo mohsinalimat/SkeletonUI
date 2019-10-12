@@ -1,0 +1,7 @@
+excluded:
+  - Examples
+  - .build
+
+line_length:
+  warning: 220
+  error: 260

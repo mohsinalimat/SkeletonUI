@@ -6,19 +6,19 @@ public struct SkeletonList<Data, Content>: View where Data: RandomAccessCollecti
     private let data: [Data.Element]
     private let quantity: Int
     private let content: (Bool, Data.Element?) -> Content
-    
+
     public init(with data: Data, quantity: Int = 1, @ViewBuilder content: @escaping (Bool, Data.Element?) -> Content) {
-        self.loading = data.isEmpty
+        loading = data.isEmpty
         self.data = data.map { $0 }
         self.quantity = quantity
         self.content = content
     }
-    
+
     public var body: some View {
         Group {
             if loading {
                 List {
-                    ForEach(0..<quantity) { _ in
+                    ForEach(0 ..< quantity) { _ in
                         self.content(self.loading, nil)
                     }
                 }

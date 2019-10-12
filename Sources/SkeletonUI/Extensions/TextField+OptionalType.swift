@@ -8,7 +8,7 @@ public extension TextField where Label == Text {
             self.init(LocalizedStringKey(String()), text: text, onEditingChanged: onEditingChanged, onCommit: onCommit)
         }
     }
-    
+
     init<S>(_ title: S?, text: Binding<String>, onEditingChanged: @escaping (Bool) -> Void = { _ in }, onCommit: @escaping () -> Void = {}) where S: OptionalType, S.Wrapped: StringProtocol {
         if let title = title?.wrapped {
             self.init(title, text: text, onEditingChanged: onEditingChanged, onCommit: onCommit)
@@ -16,7 +16,7 @@ public extension TextField where Label == Text {
             self.init(String(), text: text, onEditingChanged: onEditingChanged, onCommit: onCommit)
         }
     }
-    
+
     init<T>(_ titleKey: LocalizedStringKey?, value: Binding<T>, formatter: Formatter, onEditingChanged: @escaping (Bool) -> Void = { _ in }, onCommit: @escaping () -> Void = {}) {
         if let titleKey = titleKey {
             self.init(titleKey, value: value, formatter: formatter, onEditingChanged: onEditingChanged, onCommit: onCommit)
@@ -24,7 +24,7 @@ public extension TextField where Label == Text {
             self.init(LocalizedStringKey(String()), value: value, formatter: formatter, onEditingChanged: onEditingChanged, onCommit: onCommit)
         }
     }
-    
+
     init<S, T>(_ title: S?, value: Binding<T>, formatter: Formatter, onEditingChanged: @escaping (Bool) -> Void = { _ in }, onCommit: @escaping () -> Void = {}) where S: OptionalType, S.Wrapped: StringProtocol {
         if let title = title?.wrapped {
             self.init(title, value: value, formatter: formatter, onEditingChanged: onEditingChanged, onCommit: onCommit)

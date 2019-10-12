@@ -18,9 +18,9 @@ struct ShapeViewModel {
 
     func path(in rect: CGRect) -> Path {
         switch type {
-        case .rounded(.radius(let radius, let style)):
+        case let .rounded(.radius(radius, style)):
             return RoundedRectangle(cornerRadius: radius, style: style).path(in: rect)
-        case .rounded(.size(let size, let style)):
+        case let .rounded(.size(size, style)):
             return RoundedRectangle(cornerSize: size, style: style).path(in: rect)
         case .rectangle:
             return Rectangle().path(in: rect)
@@ -32,5 +32,4 @@ struct ShapeViewModel {
             return Capsule().path(in: rect)
         }
     }
-
 }

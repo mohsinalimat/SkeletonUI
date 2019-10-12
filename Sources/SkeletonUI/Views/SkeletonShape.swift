@@ -9,10 +9,10 @@ struct SkeletonShape: Shape {
 
     init(skeleton: SkeletonViewModel) {
         self.skeleton = skeleton
-        self.position = skeleton.animation.position
-        self.opacity = skeleton.animation.opacity
-        self.radius = skeleton.animation.radius
-        self.angle = skeleton.animation.angle
+        position = skeleton.animation.position
+        opacity = skeleton.animation.opacity
+        radius = skeleton.animation.radius
+        angle = skeleton.animation.angle
     }
 
     func path(in rect: CGRect) -> Path {

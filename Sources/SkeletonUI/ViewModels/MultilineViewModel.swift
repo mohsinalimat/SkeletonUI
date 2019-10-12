@@ -2,6 +2,6 @@ import SwiftUI
 
 struct MultilineViewModel {
     var lines: Int = 1
-    var spacing: CGFloat? = nil
+    var spacing: CGFloat?
     var scales: [Int: CGFloat]?
 }
