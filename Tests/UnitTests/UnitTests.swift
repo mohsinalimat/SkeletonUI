@@ -3,10 +3,6 @@ import XCTest
 
 final class SkeletonUITests: XCTestCase {
     func testExample() {
-        XCTAssert(true)
+        XCTAssert(false)
     }
-
-    static var allTests = [
-        ("testExample", testExample)
-    ]
 }
