@@ -44,7 +44,6 @@ let package = Package(
     let config = PackageConfig([
         "komondor": [
             "pre-commit": [
-                "echo asdasd",
                 "swift test",
                 "swift run swiftformat .",
                 "swift run swiftlint autocorrect",
