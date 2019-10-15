@@ -1,68 +1,20 @@
 import SwiftUI
 
-typealias UnitPoints = (start: UnitPoint, end: UnitPoint)
-typealias Radii = (start: CGFloat, end: CGFloat)
-typealias Angles = (start: Angle, end: Angle)
-
-class PositionViewModel: ObservableObject {
-    @Published var value: CGFloat = .zero
-    var animation: Animation?
-    var range: ClosedRange<CGFloat> = .zero ... 1 {
-        didSet {
-            value = range.lowerBound
-        }
-    }
-
-    var values: UnitPoints {
-        (start: UnitPoint(x: value - 1, y: 0.5), end: UnitPoint(x: value + 1, y: 0.5))
-    }
-}
-
-class OpacityViewModel: ObservableObject {
-    @Published var value: Double = .zero
-    var animation: Animation?
-    var range: ClosedRange<Double> = .zero ... 1 {
-        didSet {
-            value = range.lowerBound
-        }
-    }
-}
-
-class RadiusViewModel: ObservableObject {
-    @Published var value: CGFloat = .zero
-    var animation: Animation?
-    var range: ClosedRange<CGFloat> = 1 ... 40 {
-        didSet {
-            value = range.lowerBound
-        }
-    }
-
-    var values: Radii {
-        (start: .zero, end: value)
-    }
-}
-
-class AngleViewModel: ObservableObject {
-    @Published var value: Double = .zero
-    var animation: Animation?
-    var range: ClosedRange<Double> = .zero ... 360 {
-        didSet {
-            value = range.lowerBound
-        }
-    }
-
-    var values: Angles {
-        (start: .zero, end: .degrees(value))
-    }
-}
-
 public enum AnimationType {
     case none
     case pulse(opacity: ClosedRange<Double> = .zero ... 1, duration: Double = 0.75, delay: Double = 0, autoreverses: Bool = true)
     case linear(range: ClosedRange<CGFloat> = .zero ... 1, duration: Double = 1, delay: Double = 0.25, autoreverses: Bool = false)
 }
 
-struct AnimationViewModel {
+protocol AnimationViewModelable {
+    var position: PositionViewModel { get }
+    var opacity: OpacityViewModel { get }
+    var radius: RadiusViewModel { get }
+    var angle: AngleViewModel { get }
+    var type: AnimationType { get }
+}
+
+final class AnimationViewModel: AnimationViewModelable {
     let position = PositionViewModel()
     let opacity = OpacityViewModel()
     let radius = RadiusViewModel()

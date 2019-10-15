@@ -31,10 +31,15 @@ public enum GradientType {
     }
 #endif
 
-struct AppearanceViewModel {
+protocol AppearanceViewModelable {
+    var type: AppearanceType { get }
+    func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> AnyView where S: Shape
+}
+
+final class AppearanceViewModel: AppearanceViewModelable {
     var type: AppearanceType = .gradient()
 
-    func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> some View where S: Shape {
+    func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> AnyView where S: Shape {
         switch type {
         case let .solid(color, background):
             return AnyView(ZStack {
