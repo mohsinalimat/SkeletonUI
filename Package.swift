@@ -19,7 +19,6 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Realm/SwiftLint", from: "0.35.0"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.40.13"),
-        .package(url: "https://github.com/shibapm/Komondor", from: "1.0.4"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.6.0")
     ],
     targets: [
@@ -37,19 +36,3 @@ let package = Package(
     ],
     swiftLanguageVersions: [.v5]
 )
-
-#if canImport(PackageConfig)
-    import PackageConfig
-
-    let config = PackageConfig([
-        "komondor": [
-            "pre-commit": [
-                "swift test",
-                "swift run swiftformat .",
-                "swift run swiftlint autocorrect",
-                "git add ."
-            ],
-            "pre-push": "swift test"
-        ]
-    ])
-#endif

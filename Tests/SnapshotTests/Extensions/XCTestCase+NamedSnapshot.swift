@@ -1,6 +1,6 @@
-import XCTest
 import SnapshotTesting
 import SwiftUI
+import XCTest
 
 extension XCTestCase {
     private var scale: String {
