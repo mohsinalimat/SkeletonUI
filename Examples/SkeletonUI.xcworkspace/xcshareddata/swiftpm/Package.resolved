@@ -66,11 +66,11 @@
       },
       {
         "package": "SnapshotTesting",
-        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing",
+        "repositoryURL": "https://github.com/IdeasOnCanvas/swift-snapshot-testing",
         "state": {
-          "branch": null,
-          "revision": "35aac0fbc74cdb0848923d42ddbdd3400c938f72",
-          "version": "1.6.0"
+          "branch": "nsview-imagesnapshot",
+          "revision": "07bc905fddb71de7592d5367cbc4cd2d5f57c786",
+          "version": null
         }
       },
       {

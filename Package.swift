@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Realm/SwiftLint", from: "0.35.0"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.40.13"),
-        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.6.0")
+        .package(url: "https://github.com/IdeasOnCanvas/swift-snapshot-testing", .branch("nsview-imagesnapshot"))
     ],
     targets: [
         .target(
