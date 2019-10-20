@@ -13,3 +13,13 @@ final class OpacityInteractor: OpacityInteractable {
         presenter = OpacityPresenter()
     }
 }
+
+struct OpacityInteractableMock: OpacityInteractable {
+    var presenter: OpacityPresenter
+    var animation: Animation?
+
+    init() {
+        presenter = OpacityPresenter()
+        presenter.range = 0.5 ... 0.75
+    }
+}

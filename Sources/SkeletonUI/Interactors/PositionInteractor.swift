@@ -13,3 +13,13 @@ final class PositionInteractor: PositionInteractable {
         presenter = PositionPresenter()
     }
 }
+
+struct PositionInteractableMock: PositionInteractable {
+    var presenter: PositionPresenter
+    var animation: Animation?
+
+    init() {
+        presenter = PositionPresenter()
+        presenter.range = 0.25 ... 0.75
+    }
+}

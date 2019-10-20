@@ -10,6 +10,8 @@ readonly root_directory=`"${scripts_path}/repository-root-path"`
 
 cd "${root_directory}"
 
+${scripts_path}/remove-tests-snapshots
+
 xcodebuild test -destination platform="macOS" -scheme "SnapshotTests"
 xcodebuild test -destination name="Apple TV" -scheme "SnapshotTests"
 xcodebuild test -destination name="Apple TV 4K" -scheme "SnapshotTests"
