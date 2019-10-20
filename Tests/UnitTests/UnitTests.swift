@@ -66,6 +66,38 @@ final class UnitTests: XCTestCase {
         XCTAssert(shape.type == .capsule)
     }
 
+    func testRoundedRectangleRadiusShape() {
+        var shape = SkeletonInteractor(loading: true).shape
+        shape.type = .rounded(.radius(20))
+        XCTAssert(shape.path(in: .zero).description == "0 0 m 0 0 l 0 0 l 0 0 l 0 0 l 0 0 l")
+        shape.type = .rounded(.size(CGSize(width: 10, height: 10)))
+        XCTAssert(shape.path(in: .zero).description == "0 0 m 0 0 l 0 0 l 0 0 l 0 0 l 0 0 l")
+    }
+
+    func testRectangleShape() {
+        var shape = SkeletonInteractor(loading: true).shape
+        shape.type = .rectangle
+        XCTAssert(shape.path(in: .zero).description == "0 0 m 0 0 l 0 0 l 0 0 l h")
+    }
+
+    func testCircleShape() {
+        var shape = SkeletonInteractor(loading: true).shape
+        shape.type = .circle
+        XCTAssert(shape.path(in: .zero).description == "0 0 m 0 0 0 0 0 0 c 0 0 0 0 0 0 c 0 0 0 0 0 0 c 0 0 0 0 0 0 c h")
+    }
+
+    func testEllipseShape() {
+        var shape = SkeletonInteractor(loading: true).shape
+        shape.type = .ellipse
+        XCTAssert(shape.path(in: .zero).description == "0 0 m 0 0 0 0 0 0 c 0 0 0 0 0 0 c 0 0 0 0 0 0 c 0 0 0 0 0 0 c h")
+    }
+
+    func testCapsuleShape() {
+        var shape = SkeletonInteractor(loading: true).shape
+        shape.type = .capsule
+        XCTAssert(shape.path(in: .zero).description == "0 0 m 0 0 l 0 0 l 0 0 l h")
+    }
+
     func testDefaultAppearance() {
         let appearance = SkeletonInteractor(loading: true).appearance
         XCTAssert(appearance.type == .gradient())
