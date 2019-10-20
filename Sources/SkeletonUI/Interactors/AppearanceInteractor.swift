@@ -31,12 +31,12 @@ public enum GradientType {
     }
 #endif
 
-protocol AppearanceViewModelable {
+protocol AppearanceInteractable {
     var type: AppearanceType { get }
     func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> AnyView where S: Shape
 }
 
-final class AppearanceViewModel: AppearanceViewModelable {
+final class AppearanceInteractor: AppearanceInteractable {
     var type: AppearanceType = .gradient()
 
     func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> AnyView where S: Shape {

@@ -13,12 +13,12 @@ public enum ShapeType {
     case capsule
 }
 
-protocol ShapeViewModelable {
+protocol ShapeInteractable {
     var type: ShapeType { get }
     func path(in rect: CGRect) -> Path
 }
 
-final class ShapeViewModel: ShapeViewModelable {
+final class ShapeInteractor: ShapeInteractable {
     var type: ShapeType = .capsule
 
     func path(in rect: CGRect) -> Path {

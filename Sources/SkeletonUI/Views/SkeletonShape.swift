@@ -1,18 +1,18 @@
 import SwiftUI
 
 struct SkeletonShape: Shape {
-    let skeleton: SkeletonViewModel
-    @ObservedObject private var position: PositionViewModel
-    @ObservedObject private var opacity: OpacityViewModel
-    @ObservedObject private var radius: RadiusViewModel
-    @ObservedObject private var angle: AngleViewModel
+    private let skeleton: SkeletonInteractor
+    @ObservedObject private var position: PositionPresenter
+    @ObservedObject private var opacity: OpacityPresenter
+    @ObservedObject private var radius: RadiusPresenter
+    @ObservedObject private var angle: AnglePresenter
 
-    init(skeleton: SkeletonViewModel) {
+    init(skeleton: SkeletonInteractor) {
         self.skeleton = skeleton
-        position = skeleton.animation.position
-        opacity = skeleton.animation.opacity
-        radius = skeleton.animation.radius
-        angle = skeleton.animation.angle
+        position = skeleton.animation.position.presenter
+        opacity = skeleton.animation.opacity.presenter
+        radius = skeleton.animation.radius.presenter
+        angle = skeleton.animation.angle.presenter
     }
 
     func path(in rect: CGRect) -> Path {
