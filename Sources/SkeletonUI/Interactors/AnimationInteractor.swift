@@ -7,18 +7,18 @@ public enum AnimationType {
 }
 
 protocol AnimationInteractable {
-    var position: PositionInteractor { get }
-    var opacity: OpacityInteractor { get }
-    var radius: RadiusInteractor { get }
-    var angle: AngleInteractor { get }
-    var type: AnimationType { get }
+    var position: PositionInteractable { get set }
+    var opacity: OpacityInteractable { get set }
+    var radius: RadiusInteractable { get set }
+    var angle: AngleInteractable { get set }
+    var type: AnimationType { get set }
 }
 
 final class AnimationInteractor: AnimationInteractable {
-    let position = PositionInteractor()
-    let opacity = OpacityInteractor()
-    let radius = RadiusInteractor()
-    let angle = AngleInteractor()
+    var position: PositionInteractable
+    var opacity: OpacityInteractable
+    var radius: RadiusInteractable
+    var angle: AngleInteractable
     var type: AnimationType = .linear() {
         didSet {
             switch type {
@@ -37,5 +37,12 @@ final class AnimationInteractor: AnimationInteractable {
                 angle.animation = Animation.easeInOut(duration: duration).delay(delay).speed(speed).repeatForever(autoreverses: autoreverses)
             }
         }
+    }
+
+    init(position: PositionInteractable = PositionInteractor(), opacity: OpacityInteractable = OpacityInteractor(), radius: RadiusInteractable = RadiusInteractor(), angle: AngleInteractable = AngleInteractor()) {
+        self.position = position
+        self.opacity = opacity
+        self.radius = radius
+        self.angle = angle
     }
 }

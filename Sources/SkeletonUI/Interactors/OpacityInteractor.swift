@@ -2,7 +2,7 @@ import SwiftUI
 
 protocol OpacityInteractable {
     var presenter: OpacityPresenter { get }
-    var animation: Animation? { get }
+    var animation: Animation? { get set }
 }
 
 final class OpacityInteractor: OpacityInteractable {

@@ -1,9 +1,9 @@
 import SwiftUI
 
 protocol MultilineInteractable {
-    var lines: Int { get }
-    var spacing: CGFloat? { get }
-    var scales: [Int: CGFloat]? { get }
+    var lines: Int { get set }
+    var spacing: CGFloat? { get set }
+    var scales: [Int: CGFloat]? { get set }
 }
 
 final class MultilineInteractor: MultilineInteractable {

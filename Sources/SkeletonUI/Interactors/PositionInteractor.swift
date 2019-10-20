@@ -2,7 +2,7 @@ import SwiftUI
 
 protocol PositionInteractable {
     var presenter: PositionPresenter { get }
-    var animation: Animation? { get }
+    var animation: Animation? { get set }
 }
 
 final class PositionInteractor: PositionInteractable {
