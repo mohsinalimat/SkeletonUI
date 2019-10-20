@@ -3,7 +3,7 @@
 # Fail if any commands fails
 set -x
 
-# Run all snapshot tests:
+# Regenerate tests snapshots:
 
 readonly scripts_path="$( cd "$(dirname "$0")" ; pwd -P )"
 readonly root_directory=`"${scripts_path}/repository-root-path"`
