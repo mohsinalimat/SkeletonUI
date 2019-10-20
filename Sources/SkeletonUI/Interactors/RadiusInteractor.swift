@@ -13,13 +13,3 @@ final class RadiusInteractor: RadiusInteractable {
         presenter = RadiusPresenter()
     }
 }
-
-struct RadiusInteractableMock: RadiusInteractable {
-    var presenter: RadiusPresenter
-    var animation: Animation?
-
-    init() {
-        presenter = RadiusPresenter()
-        presenter.range = 10 ... 30
-    }
-}

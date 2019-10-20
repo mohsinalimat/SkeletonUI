@@ -1,6 +1,6 @@
 import SwiftUI
 
-public enum AnimationType {
+public enum AnimationType: Equatable {
     case none
     case pulse(opacity: ClosedRange<Double> = .zero ... 1, duration: Double = 2, delay: Double = 1, speed: Double = 2, autoreverses: Bool = true)
     case linear(range: ClosedRange<CGFloat> = .zero ... 1, duration: Double = 4, delay: Double = 1, speed: Double = 5, autoreverses: Bool = false)
