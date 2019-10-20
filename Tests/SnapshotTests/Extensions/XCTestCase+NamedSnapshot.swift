@@ -6,7 +6,7 @@ import XCTest
     typealias ViewController = NSViewController
     typealias HostingController = NSHostingController
 
-    private let factor = NSScreen.main?.backingScaleFactor
+    private let factor: CGFloat! = NSScreen.main?.backingScaleFactor
 #else
     typealias ViewController = UIViewController
     typealias HostingController = UIHostingController
@@ -16,15 +16,8 @@ import XCTest
 
 extension XCTestCase {
     private var scale: String {
-        let formatter = NumberFormatter()
-        #if os(macOS)
-            guard let factor = factor else { fatalError(#function) }
-        #endif
-        let number = NSNumber(value: Float(factor))
-        formatter.minimumFractionDigits = 0
-        formatter.maximumFractionDigits = 0
-        guard let scale = formatter.string(from: number) else { fatalError(#function) }
-        return scale
+        let scale: Float! = Float(factor)
+        return String(Int(scale))
     }
 
     private var device: String {

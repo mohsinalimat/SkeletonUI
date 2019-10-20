@@ -33,6 +33,7 @@ public enum GradientType {
 
 protocol AppearanceInteractable {
     var type: AppearanceType { get set }
+
     func view<S>(shape: S, points: UnitPoints, opacity: Double, radii: Radii, angles: Angles) -> AnyView where S: Shape
 }
 

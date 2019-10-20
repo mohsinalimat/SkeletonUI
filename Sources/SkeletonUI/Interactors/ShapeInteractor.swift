@@ -15,6 +15,7 @@ public enum ShapeType {
 
 protocol ShapeInteractable {
     var type: ShapeType { get set }
+
     func path(in rect: CGRect) -> Path
 }
 

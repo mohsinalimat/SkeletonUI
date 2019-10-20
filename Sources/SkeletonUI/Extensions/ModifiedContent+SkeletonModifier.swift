@@ -14,12 +14,8 @@ public extension ModifiedContent where Content: View, Modifier == SkeletonModifi
 
     func multiline(lines: Int, scales: [Int: CGFloat]? = nil, spacing: CGFloat? = nil) -> ModifiedContent<Content, SkeletonModifier> {
         modifier.skeleton.multiline.lines = lines
-        if let scales = scales {
-            modifier.skeleton.multiline.scales = scales
-        }
-        if let spacing = spacing {
-            modifier.skeleton.multiline.spacing = spacing
-        }
+        modifier.skeleton.multiline.scales = scales
+        modifier.skeleton.multiline.spacing = spacing
         return self
     }
 

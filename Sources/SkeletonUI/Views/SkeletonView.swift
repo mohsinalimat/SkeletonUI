@@ -7,7 +7,7 @@ struct SkeletonView: View {
     var body: some View {
         GeometryReader { geometry in
             SkeletonShape(skeleton: self.skeleton)
-                .frame(width: (self.skeleton.loading ? self.skeleton.multiline.scales?[self.line] ?? 1 : 1) * geometry.size.width, height: geometry.size.height)
+                .frame(width: self.skeleton.multiline.scale(loading: self.skeleton.loading, line: self.line) * geometry.size.width, height: geometry.size.height)
                 .onAppear {
                     withAnimation(self.skeleton.animation.position.animation) {
                         self.skeleton.animation.position.presenter.value = self.skeleton.animation.position.presenter.range.upperBound
